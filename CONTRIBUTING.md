@@ -1,4 +1,4 @@
-# Contributing to an this project
+# Contributing to this project
 
 We welcome contributions but request that you follow these guidelines.
 
