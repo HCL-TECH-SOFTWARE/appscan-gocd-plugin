@@ -1,0 +1,84 @@
+<!-- API Key ID -->
+<div class="form_item_block">
+  <label>API Key ID: <span class="asterisk">*</span></label>
+  <input type="text" ng-model="apikeyid" ng-required="false" />   
+  <span class="contextual_help has_go_tip_right"
+        title="The API Key ID for your &lt;a target=&quot;_blank&quot; href=&quot;https://appscan.ibmcloud.com/serviceui/home&quot;&gt;Application Security on Cloud&lt;/a&gt; account">
+  </span>  
+  <span class="form_error" ng-show="GOINPUTNAME[apikeyid].$error.server">{{ GOINPUTNAME[apikeyid].$error.server }}</span>
+</div>
+
+<!-- API Key Secret -->
+<div class="form_item_block">
+  <label>API Key Secret:<span class="asterisk">*</span></label>
+  <input type="password" ng-model="apikeysecret" ng-required="false" />
+   <span class="contextual_help has_go_tip_right"
+         title="The API Key secret for your &lt;a target=&quot;_blank&quot; href=&quot;https://appscan.ibmcloud.com/serviceui/home&quot;&gt;Application Security on Cloud&lt;/a&gt; account">
+  </span>  
+  <span class="form_error" ng-show="GOINPUTNAME[apikeysecret].$error.server">{{ GOINPUTNAME[apikeysecret].$error.server }}</span>    
+</div>
+
+<!-- Application -->
+<div class="form_item_block">
+  <label>Application:<span class="asterisk">*</span></label>
+  <input type="text" ng-model="appname" ng-required="false" />
+   <span class="contextual_help has_go_tip_right"
+         title="The name of the application in &lt;a target=&quot;_blank&quot; href=&quot;https://appscan.ibmcloud.com/serviceui/home&quot;&gt;Application Security on Cloud&lt;/a&gt; to associate this scan with">
+  </span>  
+  <span class="form_error" ng-show="GOINPUTNAME[appname].$error.server">{{ GOINPUTNAME[appname].$error.server }}</span>    
+</div>
+
+<!-- Scan Name -->
+<div class="form_item_block">
+  <label>
+    Scan Name:
+  </label>
+  <input type="text" ng-model="scanname" ng-required="false" />
+  <span class="contextual_help has_go_tip_right" title="An optional name for the scan and report. If not set, the application name will be used"></span>  
+ </div>
+
+<!-- Scan Type -->
+<div class="form_item_block">
+  <label>
+    Scan Type:
+  </label>
+  <select ng-model="scantype" ng-required="false">
+    <option value="sa">Static Analyzer</option>
+  </select>
+  <span class="contextual_help has_go_tip_right" title="The type of scan to run. Dynamic and Mobile analysis will be supported in a future version"></span>    
+</div>
+
+<!-- Target -->
+<div class="form_item_block">
+  <label>
+    Target:
+  </label>
+  <input type="text" ng-model="target" ng-required="false" />
+  <span class="contextual_help has_go_tip_right" title="The target of the scan. This may be an existing .irx file or a directory containing the files to scan. Leave blank to use the default Task working directory"></span>  
+</div>
+
+<!-- Fail Conditions: -->
+<div class="form_item_block">
+  <label>
+    Fail Conditions:
+  </label>
+  <input type="text" ng-model="failconditions" ng-required="false" />
+  <span class="contextual_help has_go_tip_right" 
+        title="The conditions for when this task should fail. If set, the field must contain three commas and the format is &lt;b&gt;Total,High,Medium,Low&lt;/b&gt;. Examples:&lt;br&gt;
+               20,,, - Fail if Total Issues>20&lt;br&gt;
+               ,10,, - Fail if High Severity Issues>10&lt;br&gt;
+               8,2,, - Fail if Total>8 or High>2"></span>  
+  <span class="form_error" ng-show="GOINPUTNAME[failconditions].$error.server">
+    {{ GOINPUTNAME[failconditions].$error.server }}
+  </span>
+</div>
+
+<!-- Email Notification -->
+<div class="form_item_block">
+  <div class="checkbox_row">
+    <input id="EMAIL2" type="checkbox" ng-model="emailnotify2" ng-init="emailnotify2 = emailnotify"  ng-change="emailnotify = emailnotify2" ng-true-value="true" ng-false-value="false">
+    <input id="EMAIL" type="hidden" ng-model="emailnotify" value="{{emailnotify}}">
+    <label for="EMAIL">Email Notification</label>
+    <span class="contextual_help has_go_tip_right" title="Send an email when analysis is complete."></span>  
+  </div>
+</div>

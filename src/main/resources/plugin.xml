@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<go-plugin id="appscan.task.plugin" version="1">
+    <about>
+        <name>AppScan Task Plugin</name>
+        <version>PLUGIN_VERSION_NUMBER</version>
+        <target-go-version>GO_TARGET_VERSION_NUMBER</target-go-version>
+        <description>
+           Task plugin that supports running Application Security on Cloud scans in Go
+        </description>
+        <vendor>
+            <name>HCL</name>
+            <url>www.hcltech.com</url>
+        </vendor>
+    </about>
+</go-plugin>
