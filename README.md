@@ -1,5 +1,5 @@
 # AppScan GoCD Plugin 
-Integrate [IBM Application Security on Cloud](https://appscan.ibmcloud.com) security scanning into your GoCD pipelines
+Integrate [IBM Application Security on Cloud](https://cloud.appscan.com) security scanning into your GoCD pipelines
 
 # Prerequisites
 
@@ -19,9 +19,9 @@ This plugin adds a Pipeline Task step called "AppScan Security Test".  This task
 
 | Field           |  Description  |
 | ----------------|:------------- |
-| API Key ID      | Your [IBM Application Security on Cloud](https://appscan.ibmcloud.com) API Key ID|
-| API Key Secret  | Your [IBM Application Security on Cloud](https://appscan.ibmcloud.com) API Key Secret |
-| Application     | Name of the [IBM Application Security on Cloud](https://appscan.ibmcloud.com) application to associate the scan with |
+| API Key ID      | Your [IBM Application Security on Cloud](https://cloud.appscan.com) API Key ID|
+| API Key Secret  | Your [IBM Application Security on Cloud](https://cloud.appscan.com) API Key Secret |
+| Application     | Name of the [IBM Application Security on Cloud](https://cloud.appscan.com) application to associate the scan with |
 | Scan Name       | Name to be used for the scan |
 | Scan Type       | The type of scan to run.  Currently only "Static Analyzer" scans are supported |
 | Target          | What to scan.  Either a folder or an .IRX file that was generated in a previous Task |
