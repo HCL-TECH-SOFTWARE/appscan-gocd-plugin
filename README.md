@@ -1,5 +1,5 @@
 # AppScan GoCD Plugin 
-Integrate [HCL Application Security on Cloud](https://cloud.appscan.com) security scanning into your GoCD pipelines
+Integrate [HCL Application Security on Cloud](https://cloud.appscan.com) security scanning into your GoCD pipelines.
 
 # Prerequisites
 
